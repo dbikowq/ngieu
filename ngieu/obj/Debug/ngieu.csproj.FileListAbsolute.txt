@@ -1,0 +1,17 @@
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\bin\Debug\ngieu.exe.config
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\bin\Debug\ngieu.exe
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\bin\Debug\ngieu.pdb
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.csprojAssemblyReference.cache
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\login.g.cs
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\MainWindow.g.cs
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\App.g.cs
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu_MarkupCompile.cache
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu_MarkupCompile.lref
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\login.baml
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\MainWindow.baml
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.g.resources
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.Properties.Resources.resources
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.csproj.GenerateResource.cache
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.csproj.CoreCompileInputs.cache
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.exe
+C:\Users\kekyou\Desktop\C# проекты\ngieu\ngieu\obj\Debug\ngieu.pdb

@@ -1,0 +1,56 @@
+﻿<Window x:Class="ngieu.login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ngieu"
+        mc:Ignorable="d"
+        Title="ngieu" Height="154" Width="251" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="font" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontStyle" Value="Italic"/>
+        </Style>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Name="upper" Grid.Row="0" Background="#FFBDB4B4" Opacity="0.7" MouseDown="upper_MouseDown"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
+            <Button FontSize="9" Width="13" Content="–" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" Click="Button_Click_2">
+                <Button.Effect>
+                    <BlurEffect Radius="2"/>
+                </Button.Effect>
+            </Button>
+            <Button FontSize="8" Width="13" Content="X" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6" Click="Button_Click_1">
+                <Button.Effect>
+                    <BlurEffect Radius="2"/>
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+
+
+        <TextBlock Grid.Row="1" Text="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontStyle="Italic"/>
+
+        <StackPanel Orientation="Vertical" Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Style="{DynamicResource font}" Text="Логин" Margin="10"/>
+                <TextBox x:Name="tbLogin" Width="150" Height="25" Margin="10,0,0,0" Text="itiss_2019_19izs_02"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,-7,0,0">
+                <TextBlock Style="{DynamicResource font}" Text="Пароль" Margin="10"/>
+                <TextBox x:Name="tbPass" Width="150" Height="25" Text="535E231r-2019"/>
+            </StackPanel>
+            
+        </StackPanel>
+        <Button Grid.Row="3" Width="65" Height="23" Content="Войти" FontSize="15" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>
