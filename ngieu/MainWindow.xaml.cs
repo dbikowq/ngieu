@@ -40,6 +40,7 @@ namespace ngieu
         public class course
         {
             public string nameCourse { get; set; }
+            public string mark { get; set; }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,7 @@ namespace ngieu
 
         void getMyCourse()
         {
-            request = (HttpWebRequest)WebRequest.Create("http://ngiei.mcdir.ru/user/profile.php?id=" + CurrentUser[CurrentUser.Count-1].userID + "&showallcourses=1");
+            request = (HttpWebRequest)WebRequest.Create("http://ngiei.mcdir.ru/grade/report/overview/index.php");
             request.Method = "GET";
             request.KeepAlive = true;
             request.AllowAutoRedirect = true;
@@ -77,21 +78,16 @@ namespace ngieu
             //var htmldoc = web.Load("");
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(tmp);
-            var node = doc.DocumentNode.SelectNodes(".//a[contains(@href,'http://ngiei.mcdir.ru/user/view.php?id=" + CurrentUser[CurrentUser.Count-1].userID + "&amp;course=')]");
+            //var node = doc.DocumentNode.SelectNodes(".//a[contains(@href,'http://ngiei.mcdir.ru/course/user.php?mode=grade&amp;id')]");
+            var node = doc.DocumentNode.SelectNodes(".//tr[contains(@id,'grade-report-overview')]");
 
-            for (int i=0;i<node.Count;i++)
+            for (int i=0;i<node.Count-10;i++)
             {
-                myCourse.Add(new course { nameCourse = node[i].InnerHtml.Trim() });
+                myCourse.Add(new course { nameCourse = node[i].ChildNodes[0].InnerText.Trim(),mark = node[i].ChildNodes[1].InnerText });
             }
             DataContext = this;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-            myCourse.Add(new course { nameCourse="dddd"});
-            
-        }
     }  
 
 }

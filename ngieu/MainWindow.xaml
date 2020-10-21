@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ngieu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="264.829" Width="414.075" WindowStartupLocation="CenterScreen">
+        Title="NGIEU" Height="360.829" Width="611.675" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Height="23" Content="Авторизоваться" Click="Button_Click" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="111"/>
-        <ListView ItemsSource="{Binding myCourse}" HorizontalAlignment="Left" Height="100" Margin="10,38,0,0" VerticalAlignment="Top" Width="375">
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Вход">
+                <MenuItem Header="Авторизация" Click="Button_Click"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="btnAuth" Height="23" Content="Авторизоваться" Click="Button_Click" Margin="10,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="111"/>
+        <ListView ItemsSource="{Binding myCourse}" HorizontalAlignment="Left" Height="171" Margin="10,100,0,0" VerticalAlignment="Top" Width="439">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Мои курсы" Width="375" DisplayMemberBinding="{Binding nameCourse}"/>
+                    <GridViewColumn Header="Мои курсы" Width="330" DisplayMemberBinding="{Binding nameCourse}"/>
+                    <GridViewColumn Header="Мои оценки" Width="85" DisplayMemberBinding="{Binding mark}"/>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="273,157,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>
