@@ -41,6 +41,7 @@ namespace ngieu
                 if (authCheck == true)
                 {
                     MessageBox.Show("Авторизация успешна", "Успешно", MessageBoxButton.OK, MessageBoxImage.Information);
+                    
                     this.DialogResult = true;
                 }
                 else
@@ -110,6 +111,15 @@ namespace ngieu
             string tmp = new StreamReader(response.GetResponseStream()).ReadToEnd();
             if (tmp.Contains("Текущий пользователь"))
             {
+                Match pattern;
+                pattern = Regex.Match(tmp, "Просмотр профиля\">(.*?)</a>");
+                profile p1 = new profile();
+                p1.fio = pattern.Groups[1].Value;
+                p1.login = login;
+                p1.pass = pass;
+                pattern = Regex.Match(tmp, "data-userid=\"(.*?)\"");
+                p1.userID = pattern.Groups[1].Value;
+                CurrentUser.Add(p1);
                 return true;
             }
             else

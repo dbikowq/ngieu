@@ -23,12 +23,12 @@
         </Grid.RowDefinitions>
         <Grid Name="upper" Grid.Row="0" Background="#FFBDB4B4" Opacity="0.7" MouseDown="upper_MouseDown"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
-            <Button FontSize="9" Width="13" Content="–" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" Click="Button_Click_2">
+            <Button FontSize="8" Width="13" Content="–" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" Click="Button_Click_2" FontWeight="Black" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Fixed" VerticalContentAlignment="Center">
                 <Button.Effect>
                     <BlurEffect Radius="2"/>
                 </Button.Effect>
             </Button>
-            <Button FontSize="8" Width="13" Content="X" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6" Click="Button_Click_1">
+            <Button FontSize="6" Width="13" Content="X" Height="13" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6" Click="Button_Click_1" FontWeight="Black" VerticalContentAlignment="Center">
                 <Button.Effect>
                     <BlurEffect Radius="2"/>
                 </Button.Effect>

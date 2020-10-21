@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ngieu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="306" Width="477.5" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="264.829" Width="414.075" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Button Width="65" Height="23" Content="open" Click="Button_Click"/>
+        <Button Height="23" Content="Авторизоваться" Click="Button_Click" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="111"/>
+        <ListView ItemsSource="{Binding myCourse}" HorizontalAlignment="Left" Height="100" Margin="10,38,0,0" VerticalAlignment="Top" Width="375">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Мои курсы" Width="375" DisplayMemberBinding="{Binding nameCourse}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="273,157,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
     </Grid>
 </Window>
